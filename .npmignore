@@ -61,3 +61,8 @@ typings/
 
 # next.js build output
 .next
+
+# source code
+src
+
+.eslintrc.json
