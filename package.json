@@ -1,17 +1,14 @@
 {
-  "name": "opa-wrapper",
+  "name": "opa-pagamentos-node",
   "version": "1.0.0",
   "description": "Wrapper for Opa Pagamentos API calls",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": "https://github.com/wmenegali/opa-wrapper.git",
   "author": "Willian <willian@anthor.com.br>",
   "license": "MIT",
   "scripts": {
     "start": "nodemon -L --exec babel-node src/index.js",
-    "build": "babel src -d lib",
-    "test": "mocha --require @babel/register --recursive",
-    "test:watch": "yarn test --watch",
-    "test:coverage": "nyc yarn test"
+    "build": "babel src -d lib"
   },
   "babel": {
     "presets": [
@@ -21,14 +18,7 @@
           "@babel/plugin-proposal-class-properties"
         ]
       }
-    ],
-    "env": {
-      "test": {
-        "plugins": [
-          "istanbul"
-        ]
-      }
-    }
+    ]
   },
   "nyc": {
     "all": true,
@@ -52,12 +42,9 @@
     "@babel/node": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
-    "babel-plugin-istanbul": "^5.1.1",
-    "chai": "^4.2.0",
     "eslint": "^5.15.3",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
-    "mocha": "^6.0.2",
     "nodemon": "^1.18.10"
   }
 }
