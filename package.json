@@ -1,0 +1,57 @@
+{
+  "name": "opa-wrapper",
+  "version": "1.0.0",
+  "description": "Wrapper for Opa Pagamentos API calls",
+  "main": "index.js",
+  "repository": "https://github.com/wmenegali/opa-wrapper.git",
+  "author": "Willian <willian@anthor.com.br>",
+  "license": "MIT",
+  "scripts": {
+    "install-and-start": "NODE_ENV=development yarn && yarn start",
+    "build": "babel src -d lib",
+    "test": "mocha --require @babel/register --recursive",
+    "test:watch": "yarn test --watch",
+    "test:coverage": "nyc yarn test"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "istanbul"
+        ]
+      }
+    }
+  },
+  "nyc": {
+    "all": true,
+    "exclude": [
+      "lib/**",
+      "test/**"
+    ],
+    "per-file": true,
+    "reporter": [
+      "lcov"
+    ]
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.0",
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.2",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-istanbul": "^5.1.1",
+    "chai": "^4.2.0",
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "mocha": "^6.0.2",
+    "nodemon": "^1.18.10"
+  }
+}
