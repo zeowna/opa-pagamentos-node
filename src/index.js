@@ -1,3 +1,5 @@
+import '@babel/polyfill'
+
 export { default as Boleto } from './entities/boleto'
 export { default as Card } from './entities/card'
 export { default as Charge } from './entities/charge'
