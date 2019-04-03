@@ -1,6 +1,6 @@
 {
   "name": "opa-pagamentos-node",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Wrapper for Opa Pagamentos API calls",
   "main": "lib/index.js",
   "repository": "https://github.com/wmenegali/opa-wrapper.git",

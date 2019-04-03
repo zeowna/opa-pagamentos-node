@@ -6,7 +6,7 @@ const baseURL =
 
 const instance = axios.create({
   baseURL,
-  timeout: 5000,
+  timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
     IntegrationAuthorization: OPA_ENDPOINTS.token
