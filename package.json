@@ -1,11 +1,14 @@
 {
   "name": "opa-pagamentos-node",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Wrapper for Opa Pagamentos API calls",
   "main": "lib/index.js",
   "repository": "https://github.com/wmenegali/opa-wrapper.git",
   "author": "Willian <willian@anthor.com.br>",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "nodemon -L --exec babel-node src/index.js",
     "build": "babel src -d lib"

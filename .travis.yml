@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "10"
+before_script:
+  - yarn global add dts-gen
+  - yarn global add opa-pagamentos-node
+script:
+  - dts-gen -m opa-pagamentos-node
+after_script:
+  - sed -i "s#opa-pagamentos-node#@types/opa-pagamentos-node#" package.json
+deploy:
+  - provider: npm
+    skip_cleanup: true
+    email: "murillobrendelfreitas@gmail.com"
+    api_key: $NPM_TOKEN
+    on:
+      tags: true
