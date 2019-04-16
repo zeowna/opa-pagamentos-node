@@ -1,5 +1,4 @@
-import { post } from './base'
-import { get } from 'https'
+import { get, post } from './base'
 
 const integrationUri = `/integration/checkout`
 
@@ -22,6 +21,17 @@ const integrationUri = `/integration/checkout`
  */
 
 export default class Boleto {
+
+  /**
+   * @return {{PAST_DUE: number, PAID: number, PENDING: number}}
+   * @constructor
+   */
+  static STATUS = () => ({
+    PENDING: 0,
+    PAID: 1,
+    PAST_DUE: 2
+  })
+
   /**
    * @description Gera um boleto
    * @param {boletoProps} boleto
