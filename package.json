@@ -1,6 +1,6 @@
 {
   "name": "opa-pagamentos-node",
-  "version": "1.0.5",
+  "version": "1.0.9",
   "description": "Wrapper for Opa Pagamentos API calls",
   "main": "lib/index.js",
   "repository": "https://github.com/wmenegali/opa-wrapper.git",
@@ -35,19 +35,19 @@
     ]
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.0",
+    "@babel/polyfill": "^7.4.3",
     "axios": "^0.18.0",
     "babel-core": "7.0.0-bridge.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.4.0",
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
     "@babel/node": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
-    "@babel/preset-env": "^7.4.2",
-    "eslint": "^5.15.3",
+    "@babel/preset-env": "^7.4.3",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
-    "nodemon": "^1.18.10"
+    "nodemon": "^1.18.11"
   }
 }
