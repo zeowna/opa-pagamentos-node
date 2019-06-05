@@ -1,14 +1,14 @@
 language: node_js
 node_js:
   - "10"
-before_script:
-  - yarn global add dts-gen
-  - yarn global add opa-pagamentos-node
+#before_script:
+#  - yarn global add dts-gen
+#  - yarn global add opa-pagamentos-node
 script:
   - yarn build
-  - dts-gen -m opa-pagamentos-node -d lib
-after_script:
-  - sed -i "s#opa-pagamentos-node#@types/opa-pagamentos-node#" package.json
+#  - dts-gen -m opa-pagamentos-node -d lib
+#after_script:
+#  - sed -i "s#opa-pagamentos-node#@types/opa-pagamentos-node#" package.json
 deploy:
   - provider: npm
     skip_cleanup: true
