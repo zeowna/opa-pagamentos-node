@@ -2,11 +2,11 @@ import axios from 'axios'
 import OPA_ENDPOINTS from '../consts'
 
 const baseURL =
-  process.env.NODE_ENV === 'production' ? OPA_ENDPOINTS.production : OPA_ENDPOINTS.sandbox
+  process.env.OPA_ENV === 'production' ? OPA_ENDPOINTS.production : OPA_ENDPOINTS.sandbox
 
 const instance = axios.create({
   baseURL,
-  timeout: 10000,
+  timeout: 40000,
   headers: {
     'Content-Type': 'application/json',
     IntegrationAuthorization: OPA_ENDPOINTS.token
