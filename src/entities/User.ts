@@ -4,7 +4,7 @@ import { get, post, postMultipart } from "./Base";
 
 const integrationUri = `/integration/partner`;
 
-export default class User {
+export class User {
   /**
    * @description Creates an user
    * @param userProps
@@ -40,7 +40,7 @@ export default class User {
    *
    * @see https://documenter.getpostman.com/view/3156896/7LhjRZb#22b17bf2-e784-48f7-9f21-5292a7f2892d
    */
-  static documentUpload = (cpf: ImageTypes, imageType: string, blob: File | Blob) => {
+  static documentUpload = (cpf: string, imageType: ImageTypes, blob: File | Blob) => {
     const data = new FormData();
     data.append("form", blob);
     return postMultipart(`${integrationUri}/documentupload?imagetype=${imageType}&CPF=${cpf}`, data);

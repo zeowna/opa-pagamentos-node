@@ -1,5 +1,5 @@
 import Axios, { AxiosPromise } from "axios";
-import OPA_ENDPOINTS from "../consts";
+import * as OPA_ENDPOINTS from "../consts";
 
 const baseURL =
   process.env.NODE_ENV === "production" ? OPA_ENDPOINTS.production : OPA_ENDPOINTS.sandbox;
