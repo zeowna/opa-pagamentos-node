@@ -7,8 +7,8 @@
   "author": "Willian <willian@anthor.com.br>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon -L --exec babel-node src/index.js",
-    "build": "babel src -d lib"
+    "start": "nodemon -L --exec ts-node src/index.ts",
+    "build": "tsc --project tsconfig.json"
   },
   "babel": {
     "presets": [
@@ -32,19 +32,13 @@
     ]
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.0",
-    "axios": "^0.18.0",
-    "babel-core": "7.0.0-bridge.0"
+    "axios": "^0.18.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.4.0",
-    "@babel/node": "^7.2.2",
-    "@babel/plugin-proposal-class-properties": "^7.4.0",
-    "@babel/preset-env": "^7.4.2",
-    "eslint": "^5.15.3",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.16.0",
-    "nodemon": "^1.18.10"
+    "@types/node": "^12.0.10",
+    "nodemon": "^1.18.10",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.2"
   }
 }

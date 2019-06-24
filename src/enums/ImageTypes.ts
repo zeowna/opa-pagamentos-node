@@ -1,0 +1,7 @@
+export enum ImageTypes {
+  FRENTE_DO_DOCUMENTO = 0,
+  VERSO_DO_DOCUMENTO = 1,
+  SELFIE = 2,
+  COMPROVANTE_DE_RESIDENCIA = 3,
+  IRPF = 4,
+}
